@@ -3,7 +3,7 @@ module Refinery
     if RUBY_VERSION.start_with? "2"
       refine(type) { include mod }
     else
-      type.class_eval { include }
+      type.class_eval { include mod }
     end
   end
 end
